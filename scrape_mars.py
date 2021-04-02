@@ -6,6 +6,10 @@ import time
 from webdriver_manager.chrome import ChromeDriverManager
 import pprint
 
+def init_browser():
+    executable_path = {"executable_path": "chromedriver.exe"}
+    return Browser("chrome", **executable_path, headless=False)
+
 def scrape():
     # # NASA Mars News
     # Setup splinter
@@ -81,7 +85,7 @@ def scrape():
 
     #Setting URLs to variables
     hemis_url = "https://marshemispheres.com/"
-    rowser.visit(hemis_url) 
+    browser.visit(hemis_url) 
     myhtml_3 = browser.html  
     soup3 = BeautifulSoup(myhtml_3, 'html.parser')
     #pprint.pprint(soup3)
