@@ -24,15 +24,7 @@ def scrape():
     # Create BeautifulSoup object; parse with 'html.parser'
     soup = BeautifulSoup(myhtml, 'html.parser')
 
-    # Examine the results, then determine element that contains sought info
-    #pprint.pprint(soup)
-
-    # Scrape the Mars News Site and collect the latest News Title and Paragraph Text. 
-    # Assign the text to variables that you can reference later.
-
-    # #Latest News Title
     news_title = soup.find('div', class_="list_text")
-
 
     #Loop through returned results
     for news in news_title:
@@ -43,7 +35,6 @@ def scrape():
     print(list_date.text)
     print(latest_title.text)
     print(latest_parag.text)
-
 
     # # JPL Mars Space Images - Featured Image
     #Set up Splinter
@@ -126,6 +117,7 @@ def scrape():
         print(hemis_urls + hemis_image_url) 
         print(hemisphere_image_urls)    
 
+        return hemis_dictionary
 
 
 
