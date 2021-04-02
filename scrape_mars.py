@@ -121,7 +121,7 @@ def scrape():
         print(hemis_urls + hemis_image_url) 
         print(hemisphere_image_urls)    
 
-        return hemis_dictionary
+    return hemis_dictionary
 
 
 
